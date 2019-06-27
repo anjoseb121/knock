@@ -1,5 +1,5 @@
 module Knock
-  class Authenticable
+  module Authenticable
     def authenticate_for entity_class
       getter_name = "current_#{entity_class.to_s.parameterize.underscore}"
       define_current_entity_getter(entity_class, getter_name)
